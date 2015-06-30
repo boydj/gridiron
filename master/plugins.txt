@@ -42,3 +42,4 @@ warnings:latest
 tasks:latest
 ccm:latest
 dependency-check-jenkins-plugin:latest
+swarm:latest
