@@ -16,6 +16,9 @@ RUN update-ca-certificates
 COPY plugins.sh /usr/local/bin/plugins.sh
 RUN chmod +x /usr/local/bin/plugins.sh
 
+ADD https://github.com/JoelJ/ez-templates/releases/download/v1.0-20150623/ez-templates.hpi /usr/share/jenkins/ref/plugins/ez-templates.jpi 
+RUN chmod -R 775 /usr/share/jenkins/ref/plugins/ez-templates.jpi
+
 ENTRYPOINT ["/tini", "--", "/usr/local/bin/jenkins.sh"]
 
 USER jenkins
