@@ -1,0 +1,5 @@
+See https://registry.hub.docker.com/u/maestrodev/build-agent/ for more information.
+
+To run a slave, change JENKINS_MASTER to the correct location and execute.
+
+docker run -d -e JENKINS_MASTER=http://192.168.59.103:8080 jenkins-slave:dockerfile
