@@ -21,7 +21,7 @@ RUN chmod -R 775 /usr/share/jenkins/ref/plugins/ez-templates.jpi
 
 ENTRYPOINT ["/tini", "--", "/usr/local/bin/jenkins.sh"]
 
-USER jenkins
-
 COPY plugins.txt /plugins.txt
 RUN /usr/local/bin/plugins.sh /plugins.txt
+
+COPY groovy/*.groovy /usr/share/jenkins/ref/init.groovy.d/
