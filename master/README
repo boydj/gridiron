@@ -1,0 +1,5 @@
+To launch a Jenkins master, execute the below.
+
+Swarming doesn't seem to work properly right now for slaves, so you'll have to pass the IP address to the slave container to connect.
+
+docker run -p 8080:8080 -p 50000:50000 -p 33848:33848/udp -v /Users/joshboyd/Code/gridiron/jenkins-home:/var/jenkins_home jenkins:dockerfile
